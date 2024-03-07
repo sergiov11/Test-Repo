@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', serif;
+  }
+  
+  #map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  #mainTitle {
+    left: 20px;
+    top: 20px;
+    width: 300px;
+    height: 50px;
+    background: #201d1d;
+    position: absolute;
+    padding: 20px;
+    z-index: 2;
+    border-radius: 10px;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  .toggle-container {
+    position: absolute;
+    top: 500px;
+    left: 10px;
+    z-index: 3;
+}
+
+  #info {
+    z-index: 1;
+    position: absolute;
+    width: 20%;
+    top: 0;
+    bottom: 50%;
+    right: 0%;
+    height: 97%;
+    background: #201d1d;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    overflow-y: auto; 
+  }
+  
+  #info a {
+    color: lightgray;
+  }
+  
+  #info a:hover {
+    color: white;
+    opacity: 0.3;
+  }
+  
+  #title {
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  #title span {
+    font-size: 14px;
+    float: right;
+    margin-right: 10px;
+  }
+  
+  #desc {
+    text-align: left;
+    color: lightgray;
+    font-size: medium;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+  
+  #legend-container {
+      position: absolute;
+      top: 150px;
+      right: 25px;
+      background-color: rgb(241, 241, 241);
+      border: 1px solid #3f3d3d;
+      padding: 10px;
+      z-index: 10;
+      max-height: 400px;
+      overflow-y: auto;
+      width: 85%;
+      height: 20%;
+      color:rgb(0, 0, 0);
+      font-family: 'Oswald', sans-serif;
+  }
+
+  #legend-container :hover{
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+    background-color: #9b9898;
+  }
+
+  .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      z-index: 11;
+  }
+  
+  .legend-color {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+  }
+  
+  .legend-label {
+      white-space: nowrap;
+  }
+  
+  .break {
+      position: relative;
+      margin: 0px;
+      padding: 0px;
+  }
+  
+  .dot {
+      display: inline-block;
+      margin-top: 5px;
+      border-radius: 50%;
+      opacity: 0.6;
+  }
+  
+  .dot-label {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-style: italic;
+  }
