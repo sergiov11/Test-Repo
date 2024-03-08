@@ -1,17 +1,18 @@
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Titillium Web', serif;
-  }
-  
-  #map {
+}
+
+#map {
     position: absolute;
     top: 0;
     bottom: 0;
     width: 100%;
-  }
+}
 
-  #mainTitle {
+#mainTitle {
     left: 40px;
     top: 40px;
     width: 400px;
@@ -25,9 +26,9 @@ body {
     color: black;
     text-align: center;
     font-family: 'Oswald', sans-serif;
-  }
-  
-  .toggle-container {
+}
+
+.toggle-container {
     position: absolute;
     top: 500px;
     right: 5px; /* Adjusted from .5px */
@@ -36,50 +37,46 @@ body {
     height: 30px; /* Adjusted height */
 }
 
-
-
 #info {
-  z-index: 1000;
-  position: absolute;
-  width: 500px;
-  top: 1%;
-  bottom: 1%;
-  right: .5%;
-  padding: 40px 15px 40px 15px; /* Adjusted bottom padding */
-  background: #50C878;
-  color: black;
+    z-index: 1000;
+    position: absolute;
+    width: 500px;
+    top: 1%;
+    bottom: 1%;
+    right: .5%;
+    padding: 40px 15px 40px 15px; /* Adjusted bottom padding */
+    background: #50C878;
+    color: black;
 }
 
-
-  
-  #info a {
+#info a {
     color: lightgray;
-  }
-  
-  #info a:hover {
+}
+
+#info a:hover {
     color: white;
     opacity: 0.3;
-  }
-  
-  #title {
+}
+
+#title {
     font-size: 25px;
     font-family: 'Oswald', sans-serif;
-  }
-  
-  #title span {
+}
+
+#title span {
     font-size: 14px;
     float: right;
     margin-right: 10px;
-  }
-  
-  #desc {
+}
+
+#desc {
     text-align: left;
     color: lightgray;
     font-size: medium;
     font-weight: bold;
     margin-bottom: 0px;
-  }
-  
+}
+
 #legend-container {
     position: absolute;
     top: 150px;
@@ -96,46 +93,67 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
-
-  #legend-container :hover{
-    color:rgb(0, 0, 0);
+#legend-container:hover {
+    color: rgb(0, 0, 0);
     font-weight: bold;
     background-color: #9b9898;
-  }
+}
 
-  .legend-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 5px;
-      z-index: 11;
-  }
-  
-  .legend-color {
-      width: 20px;
-      height: 20px;
-      margin-right: 5px;
-  }
-  
-  .legend-label {
-      white-space: nowrap;
-  }
-  
-  .break {
-      position: relative;
-      margin: 0px;
-      padding: 0px;
-  }
-  
-  .dot {
-      display: inline-block;
-      margin-top: 5px;
-      border-radius: 50%;
-      opacity: 0.6;
-  }
-  
-  .dot-label {
-      position: absolute;
-      top: 0;
-      right: 0;
-      font-style: italic;
-  }
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    z-index: 11;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.legend-label {
+    white-space: nowrap;
+}
+
+.break {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+.dot {
+    display: inline-block;
+    margin-top: 5px;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.dot-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-style: italic;
+}
+#projectInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  height: auto; /* Adjusted height to fit content */
+  max-height: 70%; /* Limiting maximum height to 70% of the viewport height */
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+#projectInfo h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+#projectInfo p {
+  font-size: 16px;
+}
