@@ -55,7 +55,7 @@ async function geojsonFetch() {
                 type: 'circle',
                 source: 'population',
                 paint: {
-                    'circle-color': '#50C878',
+                    'circle-color': '#FFA500',
                     'circle-radius': 5,
                     'circle-opacity': 0.5
                 },
@@ -97,7 +97,7 @@ async function geojsonFetch() {
 
             // Define legend items with appropriate categories and colors
             const legendItems = {
-                'Population': '#50C878',
+                'Population': '#FFA756',
                 'High Risk': '#EE4B2B',
                 'Floodways': '#5C4033'
             };
