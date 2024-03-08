@@ -5,10 +5,18 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5ic
 const map = new mapboxgl.Map({
     container: 'map', // Container ID
     style: 'mapbox://styles/mapbox/light-v9',
-    zoom: 10.6, // Starting zoom
-    minZoom: 1,
-    center: [-121.986891, 47.549461] // Starting center coordinates (adjust according to your data)
+    zoom: 10.0, // Starting zoom
+    minZoom: 8.0, // Minimum zoom level
+    maxBounds: [
+        // Define the bounds within which the user can pan the map
+        [-123.0, 47.0], // Southwest coordinates
+        [-121.0, 49.0]  // Northeast coordinates
+    ],
+    center: [-122.18, 47.6002614], // Starting center coordinates (adjust according to your data)
+    scrollZoom: true, // Enable scroll to zoom
+    dragPan: true // Enable drag panning
 });
+
 
 // Define the asynchronous function to load GeoJSON data
 async function geojsonFetch() {
@@ -113,15 +121,48 @@ async function geojsonFetch() {
 
 // Function to toggle layer visibility based on selected category
 function toggleLayerVisibility(category) {
-    // Toggle visibility for all layers based on the selected category
-    ['population-circle', 'risk-line', 'flood-line'].forEach(layerId => {
-        // Check if the layerId contains the category name
-        const isMatchingLayer = layerId.includes(category.toLowerCase());
+    // Set visibility for all layers based on the selected category
+    switch (category) {
+        case 'Population':
+            map.setLayoutProperty('population-circle', 'visibility', 'visible');
+            map.setLayoutProperty('risk-line', 'visibility', 'visible');
+            map.setLayoutProperty('flood-line', 'visibility', 'visible');
+            break;
+        case 'High Risk':
+            map.setLayoutProperty('population-circle', 'visibility', 'visible');
+            map.setLayoutProperty('risk-line', 'visibility', 'visible');
+            map.setLayoutProperty('flood-line', 'visibility', 'visible');
+            break;
+        case 'Floodways':
+            map.setLayoutProperty('population-circle', 'visibility', 'visible');
+            map.setLayoutProperty('risk-line', 'visibility', 'visible');
+            map.setLayoutProperty('flood-line', 'visibility', 'visible');
+            break;
+        default:
+            break;
+    }
+}
+function toggleLayerVisibility(category) {
+    // Toggle visibility for the selected layer and keep others unchanged
+    switch (category) {
+        case 'Population':
+            toggleLayer('population-circle');
+            break;
+        case 'High Risk':
+            toggleLayer('risk-line');
+            break;
+        case 'Floodways':
+            toggleLayer('flood-line');
+            break;
+        default:
+            break;
+    }
+}
 
-        // Set visibility based on whether the layer matches the selected category
-        const visibility = isMatchingLayer ? 'visible' : 'none';
-        map.setLayoutProperty(layerId, 'visibility', visibility);
-    });
+function toggleLayer(layerId) {
+    const visibility = map.getLayoutProperty(layerId, 'visibility');
+    const newVisibility = visibility === 'visible' ? 'none' : 'visible';
+    map.setLayoutProperty(layerId, 'visibility', newVisibility);
 }
 
 // Invoke the function to fetch GeoJSON and set up the map
