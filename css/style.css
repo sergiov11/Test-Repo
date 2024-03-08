@@ -12,17 +12,17 @@ body {
   }
 
   #mainTitle {
-    left: 20px;
-    top: 20px;
-    width: 300px;
-    height: 50px;
-    background: #201d1d;
+    left: 40px;
+    top: 40px;
+    width: 400px;
+    height: 100px;
+    background: #50C878;
     position: absolute;
     padding: 20px;
     z-index: 2;
     border-radius: 10px;
     font-size: 40px;
-    color: white;
+    color: black;
     text-align: center;
     font-family: 'Oswald', sans-serif;
   }
@@ -30,24 +30,27 @@ body {
   .toggle-container {
     position: absolute;
     top: 500px;
-    left: 10px;
-    z-index: 3;
+    right: 5px; /* Adjusted from .5px */
+    z-index: 1000;
+    width: 30px; /* Adjusted width */
+    height: 30px; /* Adjusted height */
 }
 
-  #info {
-    z-index: 1;
-    position: absolute;
-    width: 20%;
-    top: 0;
-    bottom: 50%;
-    right: 0%;
-    height: 97%;
-    background: #201d1d;
-    padding: 20px;
-    color: white;
-    border-radius: 10px;
-    overflow-y: auto; 
-  }
+
+
+#info {
+  z-index: 1000;
+  position: absolute;
+  width: 500px;
+  top: 1%;
+  bottom: 1%;
+  right: .5%;
+  padding: 40px 15px 40px 15px; /* Adjusted bottom padding */
+  background: #50C878;
+  color: black;
+}
+
+
   
   #info a {
     color: lightgray;
@@ -77,21 +80,22 @@ body {
     margin-bottom: 0px;
   }
   
-  #legend-container {
-      position: absolute;
-      top: 150px;
-      right: 25px;
-      background-color: rgb(241, 241, 241);
-      border: 1px solid #3f3d3d;
-      padding: 10px;
-      z-index: 10;
-      max-height: 400px;
-      overflow-y: auto;
-      width: 85%;
-      height: 20%;
-      color:rgb(0, 0, 0);
-      font-family: 'Oswald', sans-serif;
-  }
+#legend-container {
+    position: absolute;
+    top: 150px;
+    right: 25px;
+    background-color: rgb(241, 241, 241);
+    border: 1px solid #3f3d3d;
+    padding: 1px;
+    z-index: 10;
+    max-height: 150px; /* Adjusted max-height */
+    overflow-y: auto;
+    width: 85%;
+    height: auto; /* Changed height to auto to allow content to dictate height */
+    color: rgb(0, 0, 0);
+    font-family: 'Oswald', sans-serif;
+}
+
 
   #legend-container :hover{
     color:rgb(0, 0, 0);

@@ -6,6 +6,6 @@
     z-index: 5;
     right: 10px;
     overflow-x: hidden;
-    height: 97%;
+    height: auto; /* Adjusted height */
     opacity: 95%;
 }
