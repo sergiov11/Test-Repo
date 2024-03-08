@@ -11,36 +11,30 @@
 
    // Create the data table.
    var data1 = new google.visualization.DataTable();
-   data1.addColumn('string', 'Type of Crime');
-   data1.addColumn('number', 'Instances');
+   data1.addColumn('string', 'Year');
+   data1.addColumn('number', 'Total Precipitation (inches)');
    data1.addRows([
-    ['Larceny-Theft', 22668],
-    ['Assault Offenses', 11036],
-    ['Motor Vehicle Theft', 9234],
-    ['Burglary/Breaking&Entering', 8528],
-    ['Destruction/Damage/Vandalism of Property', 7220],
-    ['Fraud Offenses', 3161],
-    ['Trespass of Real Property', 1798],
-    ['Robbery', 1691],
-    ['Driving Under the Influence', 1220],
-    ['Weapon Law Violations', 867]
+    ['2015', 44.38],
+    ['2016', 45.18],
+    ['2017', 47.87],
+    ['2018', 35.73],
+    ['2019', 33.88],
+    ['2020', 41.32]
    ]);
 
    var colors = [
-    '#660066',  // Dark Purple
-    '#800080',
-    '#990099',
-    '#B200B2',
-    '#CC00CC',  // Medium Purple
-    '#E500E5',
-    '#FF00FF',  // Magenta
-    '#FF33FF',
-    '#FF66FF',
-    '#FF99FF',  // Light Purple
+    '#ADD8E6',  // Light Blue
+    '#87CEEB',
+    '#6495ED',
+    '#4682B4',
+    '#4169E1',  // Royal Blue
+    '#0000FF',  // Blue
+    '#0000CD',
+    '#00008B',
 ];
 
    // Set chart options
-   var options1 = {'title':'Top 10 Crime Percentages',
+   var options1 = {'title':'Seattle Annual Precipitation (2015 - 2020)',
    'backgroundColor': '#201d1d',
    'is3D': true,
    'titleTextStyle': {
@@ -51,7 +45,7 @@
   },
   'width': 600, // Set the width of the chart
   'height': 400, // Set the height of the chart
-  'colors': colors // Set custom colors for each row
+  'colors': colors
 }
 
    // Instantiate and draw our chart, passing in some options.
